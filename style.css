@@ -138,10 +138,11 @@ body::before {
   line-height: 1.1;
   margin-bottom: 12px;
   background: linear-gradient(135deg, #fff 0%, var(--accent) 50%, var(--accent2) 100%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: fadeLeft 0.9s ease both;
+  animation: fadeLeft 0.9s ease both, gradientShift 4s ease infinite;
 }
 .typewriter {
   font-size: clamp(0.95rem, 2vw, 1.15rem);
@@ -486,6 +487,11 @@ footer strong { color: var(--text); }
 }
 @keyframes blink {
   50% { border-color: transparent; }
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ── RESPONSIVE ── */
