@@ -1,5 +1,5 @@
 // ── API BASE URL ──
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://portfolio-backend-ezd6.onrender.com';
 
 // ── LOAD SKILLS ──
 // ── LOAD SKILLS ──
