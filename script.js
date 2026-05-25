@@ -162,4 +162,20 @@ document.addEventListener('DOMContentLoaded', () => {
   document
     .getElementById('contact-form')
     .addEventListener('submit', handleContact);
+  // Mobile nav toggle
+  const burger = document.getElementById('nav-burger');
+  const navLinks = document.querySelector('.nav-links');
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    // close nav when clicking a link
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+    // ensure nav closes when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) navLinks.classList.remove('open');
+    });
+  }
 });
